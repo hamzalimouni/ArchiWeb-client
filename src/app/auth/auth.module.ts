@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { AuthRoutingModule } from './auth-routing.module';
-import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -11,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,13 +21,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    FormsModule,
     MatFormFieldModule,
     FlexLayoutModule,
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule
   ]
 })
 export class AuthModule { }

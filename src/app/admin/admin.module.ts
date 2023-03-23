@@ -8,20 +8,24 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 // import { UserRoutingModule } from './user/user-routing.module';
 // import { ProjectRoutingModule } from './project/project-routing.module';
 // import { SkillRoutingModule } from './skill/skill-routing.module';
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
     AlayoutComponent,
     DashboardComponent,
-    SidebarComponent
+    SidebarComponent,
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    // UserRoutingModule,
-    // ProjectRoutingModule,
-    // SkillRoutingModule
+    MatToolbarModule,
+    MatDividerModule,
+    MatIconModule,
+    MatSidenavModule
   ]
 })
 export class AdminModule { }

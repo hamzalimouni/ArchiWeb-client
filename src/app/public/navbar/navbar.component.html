@@ -32,8 +32,11 @@
       </ul>
       <form class="d-flex" role="search">
         <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-        <button class="btn btn-outline-light">
+        <button class="btn btn-outline-light mx-2">
           <a class="nav-link" [routerLink]="['admin']">Admin</a>
+        </button>
+        <button class="btn btn-outline-light">
+          <a class="nav-link" (click)="logout()">Logout</a>
         </button>
       </form>
     </div>

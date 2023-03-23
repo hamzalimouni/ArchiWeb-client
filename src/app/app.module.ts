@@ -12,6 +12,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ErrorComponent } from './_utils/error/error.component';
 import { RegisterComponent } from './register/register.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TokenInterceptorProvider } from './_helpers/token.interceptor';
 
 
 @NgModule({
@@ -29,17 +31,10 @@ import { RegisterComponent } from './register/register.component';
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule
   ],
-  // exports: [
-  //   FlexLayoutModule,
-  //   MatFormFieldModule,
-  //   MatInputModule,
-  //   MatButtonModule,
-  //   MatCardModule,
-  //   MatToolbarModule
-  // ],
-  providers: [],
+  providers: [TokenInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

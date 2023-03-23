@@ -6,6 +6,15 @@ import { ProjectsIndexComponent } from './projects-index/projects-index.componen
 import { ProjectsAddComponent } from './projects-add/projects-add.component';
 import { ProjectsUpdateComponent } from './projects-update/projects-update.component';
 import { ProjectsDeleteComponent } from './projects-delete/projects-delete.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -17,7 +26,16 @@ import { ProjectsDeleteComponent } from './projects-delete/projects-delete.compo
   ],
   imports: [
     CommonModule,
-    ProjectRoutingModule
+    ProjectRoutingModule,
+    MatTableModule,
+    MatIconModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatToolbarModule,
+    FlexLayoutModule,
+    MatInputModule,
+    FormsModule
   ]
 })
 export class ProjectModule { }

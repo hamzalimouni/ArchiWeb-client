@@ -1,1 +1,27 @@
-<p>projects-update works!</p>
+<div fxLayoutAlign="center center" fxFlexFill style="padding: 10px;">
+  <mat-card fxFlex="30">
+    <mat-toolbar color="primary">Update</mat-toolbar>
+    <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" fxLayoutAlign="stretch" fxLayout="column"
+      style="padding: 20px;">
+      <mat-form-field>
+        <input matInput placeholder="owner" name="ownerId" [(ngModel)]="project.ownerId" />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="title" name="title" [(ngModel)]="project.title" />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="desc" name="desc" [(ngModel)]="project.desc" />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="img" name="img" [(ngModel)]="project.img" />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="startAt" name="startAt" [(ngModel)]="project.startAt" />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="endAt" name="endAt" [(ngModel)]="project.endAt" />
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Update</button>
+    </form>
+  </mat-card>
+</div>

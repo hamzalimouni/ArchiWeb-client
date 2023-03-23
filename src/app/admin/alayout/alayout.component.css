@@ -3,5 +3,17 @@
 }
 
 .contentContainer {
+  height: 100vh;
   flex: 5;
+}
+
+.title {
+  background-color: #3f51b5;
+  color: #FFF;
+  font-size: 30px;
+  font-weight: 500;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  padding: 40px;
 }

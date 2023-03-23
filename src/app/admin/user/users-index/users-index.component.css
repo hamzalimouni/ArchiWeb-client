@@ -1,0 +1,29 @@
+:host(app-users-index) {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-mdc-table tbody,
+.mat-mdc-table tfoot,
+.mat-mdc-table thead,
+.mat-mdc-cell,
+.mat-mdc-footer-cell,
+.mat-mdc-header-row,
+.mat-mdc-row,
+.mat-mdc-footer-row,
+.mat-mdc-table .mat-mdc-header-cell {
+  min-width: 90px;
+  padding: 10px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

@@ -1,24 +1,31 @@
-<div class='sidebar'>
+<div class="slidebar">
   <div class="top">
-    <span class="logo">
-      <a>Dashbord</a>
-    </span>
+    <span class="logo">Dashbord</span>
   </div>
   <hr />
   <div class="center">
     <ul>
-      <p class="title">MAIN</p>
-      <li>
-        <a>
-          <!-- <DashboardIcon className="icon" /> -->
-          <span>Dashbord</span></a>
+      <li [routerLink]="['dashboard']">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashbord</span>
       </li>
-      <p class="title">LISTS</p>
-      <li>
-        <a>
-          <!-- <PersonOutlineIcon className="icon" /> -->
-          <span>Clients</span></a>
+      <li [routerLink]="['user']">
+        <mat-icon>person_outline</mat-icon>
+        <span>Users</span>
+      </li>
+      <li [routerLink]="['project']">
+        <mat-icon>work_outline</mat-icon>
+        <span>Projects</span>
+      </li>
+      <li [routerLink]="['skill']">
+        <mat-icon>person_outline</mat-icon>
+        <span>Skills</span>
+      </li>
+      <li [routerLink]="['enroll']">
+        <mat-icon>person_outline</mat-icon>
+        <span>Ennrolls</span>
       </li>
     </ul>
   </div>
+  <div class="bottom"></div>
 </div>
