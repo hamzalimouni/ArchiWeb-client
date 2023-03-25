@@ -1,1 +1,23 @@
-<p>skills-update works!</p>
+<div style="padding: 10px;">
+  <mat-card>
+    <mat-toolbar color="primary">Update</mat-toolbar>
+    <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" style="padding: 20px;">
+      <div class="row">
+        <mat-form-field>
+          <input matInput placeholder="title" name="title" [(ngModel)]="skill.title" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field>
+          <input matInput placeholder="desc" name="desc" [(ngModel)]="skill.desc" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field>
+          <input matInput placeholder="level" name="level" [(ngModel)]="skill.level" />
+        </mat-form-field>
+      </div>
+      <button mat-raised-button color="primary" type="submit">Update</button>
+    </form>
+  </mat-card>
+</div>

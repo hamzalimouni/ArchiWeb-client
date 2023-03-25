@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { IDataSkill } from 'src/app/_interfaces/skill';
 import { SkillService } from 'src/app/_services/skill.service';
 
 @Component({
@@ -8,11 +9,11 @@ import { SkillService } from 'src/app/_services/skill.service';
   styleUrls: ['./skills-index.component.css']
 })
 export class SkillsIndexComponent implements OnInit {
-  ELEMENT_DATA: any[] = [];
+  ELEMENT_DATA: IDataSkill[] = [];
   constructor(private skillService: SkillService) { }
   ngOnInit(): void {
     this.skillService.getAllSkills().subscribe(
-      (data: any) => { this.ELEMENT_DATA = data; console.log(this.ELEMENT_DATA) },
+      (data: IDataSkill[]) => { this.ELEMENT_DATA = data; console.log(this.ELEMENT_DATA) },
       err => console.log(err)
     )
   }
