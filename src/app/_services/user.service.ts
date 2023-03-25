@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IDataUser, ISingleUser } from '../_interfaces/user';
+import { IDataUser, ISingleUser, IUser } from '../_interfaces/user';
 
 
 @Injectable({
@@ -19,6 +19,14 @@ export class UserService {
 
   getUser(id: string | null): Observable<ISingleUser> {
     return this.http.get<ISingleUser>(`${this.url}/find/${id}`);
+  }
+
+  postUser(user: IUser) {
+    return this.http.post(this.url, user)
+  }
+
+  updateUser(user: IUser) {
+    return this.http.put(`${this.url}/${user._id}`, user);
   }
 
   deleteUser(id: string | null) {

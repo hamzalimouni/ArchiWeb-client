@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ISingleUser, IUser } from 'src/app/_interfaces/user';
 import { UserService } from 'src/app/_services/user.service';
 
@@ -22,7 +22,7 @@ export class UsersUpdateComponent implements OnInit {
     updatedAt: "",
   }
 
-  constructor(private activated: ActivatedRoute, private userService: UserService) { }
+  constructor(private activated: ActivatedRoute, private userService: UserService, private router: Router) { }
   ngOnInit(): void {
     let id = this.activated.snapshot.paramMap.get('id');
     console.log(id);
@@ -32,6 +32,9 @@ export class UsersUpdateComponent implements OnInit {
     )
   }
   onSubmit(): void {
-
+    this.userService.updateUser(this.user).subscribe(
+      data => this.router.navigate(['admin/user']),
+      err => console.log(err),
+    )
   }
 }

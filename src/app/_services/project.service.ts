@@ -19,11 +19,15 @@ export class ProjectService {
     return this.http.get<ISinglProject>(`${this.url}/find/${id}`);
   }
 
-  postProject() { }
+  postProject(project: IProject) {
+    return this.http.post(this.url, project);
+  }
 
   updateProject(project: IProject) {
     return this.http.put(`${this.url}/${project._id}`, project);
   }
 
-  deleteProject() { }
+  deleteProject(id: string | null) {
+    return this.http.delete(`${this.url}/${id}`);
+  }
 }

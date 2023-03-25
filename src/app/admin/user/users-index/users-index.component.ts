@@ -24,7 +24,7 @@ export class UsersIndexComponent implements OnInit {
     this.userService.deleteUser(id).subscribe(
       data => {
         console.log(data);
-        window.location.reload();
+        this.ngOnInit();
       },
       err => console.log(err),
     )

@@ -1,1 +1,44 @@
-<p>projects-add works!</p>
+<div style="padding: 10px;">
+  <mat-card>
+    <mat-toolbar color="primary">Add</mat-toolbar>
+    <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" style="padding: 20px;">
+      <div class="row">
+        <div class="col">
+          <mat-form-field>
+            <input matInput placeholder="owner" name="ownerId" [(ngModel)]="project.ownerId" #ownerId="ngModel" />
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field>
+            <input matInput placeholder="title" name="title" [(ngModel)]="project.title" #title="ngModel" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field>
+            <input matInput placeholder="desc" name="desc" [(ngModel)]="project.desc" #desc="ngModel" />
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field>
+            <input matInput placeholder="img" name="img" [(ngModel)]="project.img" #img="ngModel" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field>
+            <input matInput placeholder="startAt" name="startAt" [(ngModel)]="project.startAt" #startAt="ngModel" />
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field>
+            <input matInput placeholder="endAt" name="endAt" [(ngModel)]="project.endAt" #endAt="ngModel" />
+          </mat-form-field>
+        </div>
+      </div>
+      <button mat-raised-button color="primary" type="submit">Add</button>
+    </form>
+  </mat-card>
+</div>

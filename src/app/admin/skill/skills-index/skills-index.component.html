@@ -1,3 +1,8 @@
+<div class="header">
+  <button mat-mini-fab matTooltip="Primary" color="primary" [routerLink]="['add']">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
 <table mat-table [dataSource]="ELEMENT_DATA" class="mat-elevation-z8">
   <ng-container matColumnDef="title">
     <th mat-header-cell *matHeaderCellDef> Title </th>
@@ -25,7 +30,7 @@
       <button mat-mini-fab matTooltip="Primary" color="primary" [routerLink]="['update', element._id]">
         <mat-icon>edit</mat-icon>
       </button>
-      <button mat-mini-fab matTooltip="Warn" color="warn" [routerLink]="['delete', element._id]">
+      <button mat-mini-fab matTooltip="Warn" color="warn" (click)="delete(element._id)">
         <mat-icon>delete</mat-icon>
       </button>
     </td>

@@ -1,5 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/_services/auth.service';
+import { UserService } from 'src/app/_services/user.service';
 
 @Component({
   selector: 'app-users-add',
@@ -17,14 +19,15 @@ export class UsersAddComponent implements OnInit {
     createdAt: "",
     updatedAt: "",
   }
-  constructor(private http: HttpClient) { }
+  constructor(private router: Router, private userService: UserService) { }
   ngOnInit(): void {
 
   }
   onSubmit(): void {
-    this.http.post(`http://localhost:5000/api/auth/register`, this.user).subscribe(
+    this.userService.postUser(this.user).subscribe(
       (data: any) => {
         console.log(data);
+        this.router.navigate(['admin/user']);
       },
       err => console.log(err)
     )

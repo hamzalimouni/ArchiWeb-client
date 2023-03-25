@@ -1,26 +1,44 @@
-<div fxLayoutAlign="center center" style="padding: 10px;">
-  <mat-card fxFlex="80">
+<div style="padding: 10px;">
+  <mat-card>
     <mat-toolbar color="primary">Add</mat-toolbar>
-    <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" fxLayoutAlign="stretch" fxLayout="row"
-      style="padding: 20px;">
-      <mat-form-field>
-        <input matInput placeholder="firstname" name="firstname" [(ngModel)]="user.firstname" #firstname="ngModel" />
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder=" lastname" name="lastname" [(ngModel)]="user.lastname" #lastname="ngModel" />
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="username" name="username" [(ngModel)]="user.username" #username="ngModel" />
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="email" name="email" [(ngModel)]="user.email" #email="ngModel" />
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="password" name="password" [(ngModel)]="user.password" #password="ngModel" />
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="role" name="role" [(ngModel)]="user.role" #role="ngModel" />
-      </mat-form-field>
+    <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" style="padding: 20px;">
+      <div class="row">
+        <div class="col">
+          <mat-form-field>
+            <input matInput placeholder="firstname" name="firstname" [(ngModel)]="user.firstname"
+              #firstname="ngModel" />
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field>
+            <input matInput placeholder=" lastname" name="lastname" [(ngModel)]="user.lastname" #lastname="ngModel" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field>
+            <input matInput placeholder="username" name="username" [(ngModel)]="user.username" #username="ngModel" />
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field>
+            <input matInput placeholder="email" name="email" [(ngModel)]="user.email" #email="ngModel" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field>
+            <input matInput placeholder="password" name="password" [(ngModel)]="user.password" #password="ngModel" />
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field>
+            <input matInput placeholder="role" name="role" [(ngModel)]="user.role" #role="ngModel" />
+          </mat-form-field>
+        </div>
+      </div>
       <button mat-raised-button color="primary" type="submit">Add</button>
     </form>
   </mat-card>

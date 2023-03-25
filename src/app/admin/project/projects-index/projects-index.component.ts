@@ -20,4 +20,14 @@ export class ProjectsIndexComponent implements OnInit {
   }
   displayedColumns: string[] = ['title', 'desc', 'ownerId', 'startAt', 'endAt', 'action'];
   dataSource = this.ELEMENT_DATA;
+
+  delete(id: string) {
+    this.projectService.deleteProject(id).subscribe(
+      data => {
+        console.log(data);
+        this.ngOnInit();
+      },
+      err => console.log(err)
+    )
+  }
 }
