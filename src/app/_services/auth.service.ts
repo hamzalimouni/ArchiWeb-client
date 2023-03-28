@@ -15,6 +15,7 @@ export class AuthService {
 
   login(credentials: ICredentials): Observable<IToken> {
     return this.http.post<IToken>(`${this.url}/login`, credentials);
+
   }
 
   register(user: IUser) {

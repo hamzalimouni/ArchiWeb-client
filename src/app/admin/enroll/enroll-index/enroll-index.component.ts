@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { IDataEnroll } from 'src/app/_interfaces/enroll';
+import { EnrollService } from 'src/app/_services/enroll.service';
 
 @Component({
   selector: 'app-enroll-index',
@@ -7,14 +8,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./enroll-index.component.css']
 })
 export class EnrollIndexComponent implements OnInit {
-  ELEMENT_DATA: any[] = [];
-  constructor(private http: HttpClient) { }
+  ELEMENT_DATA: IDataEnroll[] = [];
+  constructor(private enrollService: EnrollService) { }
   ngOnInit(): void {
-    this.http.get('http://localhost:5000/api/enrollements').subscribe(
-      (data: any) => { this.ELEMENT_DATA = data; console.log(this.ELEMENT_DATA) },
+    this.enrollService.getAllEnrolls().subscribe(
+      data => { this.ELEMENT_DATA = data; console.log(this.ELEMENT_DATA) },
       err => console.log(err)
     )
   }
   displayedColumns: string[] = ['projectId', 'studentId', 'result', 'createdAt', 'action'];
   dataSource = this.ELEMENT_DATA;
+
+  delete(id: string) {
+    this.enrollService.delete(id).subscribe(
+      data => {
+        console.log(data);
+        this.ngOnInit();
+      },
+      err => console.log(err)
+    )
+  }
 }

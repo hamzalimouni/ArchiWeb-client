@@ -1,1 +1,28 @@
-<p>home works!</p>
+<div class="container">
+  <div fxLayout="row wrap" fxLayoutGap="10px grid">
+    <div fxFlex="33%" fxFlex.sm="50%" fxFlex.xs="100%" *ngFor="let project of projects">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{project.title}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <div>
+            <p class="desc">
+              {{project.desc}}
+            </p>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" type="submit" [routerLink]="['/single', project._id]">See
+            details</button>
+        </mat-card-actions>
+        <div class="bottom">
+          <span>{{project.startAt | date:'dd-MM-YYYY'}}</span>
+          <span>{{project.endAt | date:'dd-MM-YYYY'}}</span>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

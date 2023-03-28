@@ -30,7 +30,7 @@
       <button mat-mini-fab matTooltip="Primary" color="primary" [routerLink]="['update', element._id]">
         <mat-icon>edit</mat-icon>
       </button>
-      <button mat-mini-fab matTooltip="Warn" color="warn" [routerLink]="['delete', element._id]">
+      <button mat-mini-fab matTooltip="Warn" color="warn" (click)="delete(element._id)">
         <mat-icon>delete</mat-icon>
       </button>
     </td>

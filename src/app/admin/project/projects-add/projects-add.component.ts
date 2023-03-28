@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { IProject } from 'src/app/_interfaces/project';
 import { ProjectService } from 'src/app/_services/project.service';
 
 @Component({
@@ -8,8 +9,7 @@ import { ProjectService } from 'src/app/_services/project.service';
   styleUrls: ['./projects-add.component.css']
 })
 export class ProjectsAddComponent implements OnInit {
-
-  project: any = {
+  project: IProject = {
     ownerId: "",
     title: "",
     desc: "",

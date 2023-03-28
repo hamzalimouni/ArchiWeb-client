@@ -15,6 +15,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { MatInputModule } from '@angular/material/input';
     MatToolbarModule,
     FlexLayoutModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatSelectModule
   ]
 })
 export class ProjectModule { }

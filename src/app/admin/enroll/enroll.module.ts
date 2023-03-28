@@ -9,6 +9,11 @@ import { EnrollDeleteComponent } from './enroll-delete/enroll-delete.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { MatButtonModule } from '@angular/material/button';
     EnrollRoutingModule,
     MatTableModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatToolbarModule,
+    FormsModule,
+    MatInputModule
   ]
 })
 export class EnrollModule { }

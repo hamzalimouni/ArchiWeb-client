@@ -13,6 +13,9 @@
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['skill']">Skills</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['profile']">Profile</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
@@ -26,14 +29,19 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
       </ul>
       <form class="d-flex" role="search">
         <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
         <button class="btn btn-outline-light mx-2">
-          <a class="nav-link" [routerLink]="['admin']">Admin</a>
+          <div *ngIf="role === 'admin'">
+            <a class="nav-link" [routerLink]="['admin']">Admin</a>
+          </div>
+          <div *ngIf="role === 'owner'">
+            <a class="nav-link" [routerLink]="['/']">Owner</a>
+          </div>
+          <div *ngIf="role === 'user'">
+            <!-- <a class="nav-link" [routerLink]="['/']"></a> -->
+          </div>
         </button>
         <button class="btn btn-outline-light">
           <a class="nav-link" (click)="logout()">Logout</a>

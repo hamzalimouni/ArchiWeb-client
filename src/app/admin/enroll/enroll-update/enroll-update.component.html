@@ -1,1 +1,23 @@
-<p>enroll-update works!</p>
+<div style="padding: 10px;">
+  <mat-card>
+    <mat-toolbar color="primary">Add</mat-toolbar>
+    <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" style="padding: 20px;">
+      <div class="row">
+        <mat-form-field>
+          <input matInput placeholder="project" name="projectId" [(ngModel)]="enroll.projectId" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field>
+          <input matInput placeholder="studentId" name="studentId" [(ngModel)]="enroll.studentId" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field>
+          <input matInput placeholder="result" name="result" [(ngModel)]="enroll.result" />
+        </mat-form-field>
+      </div>
+      <button mat-raised-button color="primary" type="submit">Add</button>
+    </form>
+  </mat-card>
+</div>

@@ -1,0 +1,46 @@
+<div class="container">
+  <div style="padding: 10px;">
+    <mat-card>
+      <mat-toolbar color="primary">Profile</mat-toolbar>
+      <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" style="padding: 20px;">
+        <div class="row">
+          <div class="col" style="width: 100%;">
+            <mat-form-field>
+              <input width="100%" matInput placeholder="firstname" name="firstname" [(ngModel)]="user.firstname" />
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field>
+              <input matInput placeholder=" lastname" name="lastname" [(ngModel)]="user.lastname" />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field>
+              <input matInput placeholder="username" name="username" [(ngModel)]="user.username" />
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field>
+              <input matInput placeholder="email" name="email" [(ngModel)]="user.email" />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field>
+              <input matInput placeholder="password" name="password" [(ngModel)]="user.password" />
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field>
+              <input matInput placeholder="role" name="role" [(ngModel)]="user.role" />
+            </mat-form-field>
+          </div>
+        </div>
+        <button mat-raised-button color="primary" type="submit">Update profile</button>
+      </form>
+    </mat-card>
+  </div>
+</div>

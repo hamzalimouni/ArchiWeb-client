@@ -1,1 +1,6 @@
-<p>single works!</p>
+<div class="container">
+  <h1 class="title">{{project.title}}</h1>
+  <p class="date">Du {{project.startAt | date:'dd/MM/yyyy'}} au {{project.endAt | date:'dd/MM/yyyy'}}</p>
+  <img [src]="project.img" alt={{project.title}}>
+  <p class="description">{{project.desc}}</p>
+</div>
