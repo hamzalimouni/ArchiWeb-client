@@ -1,0 +1,27 @@
+.contentContainer {
+  height: 100vh;
+  flex: 5;
+}
+
+.title {
+  background-color: #3f51b5;
+  color: #FFF;
+  font-size: 30px;
+  font-weight: 500;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+.mat-mdc-button.mat-mdc-button-base,
+.mat-mdc-raised-button.mat-mdc-button-base,
+.mat-mdc-unelevated-button.mat-mdc-button-base,
+.mat-mdc-outlined-button.mat-mdc-button-base {
+  height: 50px;
+  width: 100%;
+}

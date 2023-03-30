@@ -16,6 +16,10 @@ export class EnrollService {
     return this.http.get<IDataEnroll[]>(this.url);
   }
 
+  getStudentsEnrolls(id: string | null): Observable<IDataEnroll[]> {
+    return this.http.get<IDataEnroll[]>(`${this.url}/projects/${id}`);
+  }
+
   getEnroll(id: string | null): Observable<ISinglEnroll> {
     return this.http.get<ISinglEnroll>(`${this.url}/find/${id}`);
   }

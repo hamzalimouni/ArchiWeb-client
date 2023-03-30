@@ -11,7 +11,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ErrorComponent } from './_utils/error/error.component';
-import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TokenInterceptorProvider } from './_helpers/token.interceptor';
 
@@ -19,8 +18,7 @@ import { TokenInterceptorProvider } from './_helpers/token.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent,
-    ErrorComponent
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,

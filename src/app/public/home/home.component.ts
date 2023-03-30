@@ -9,7 +9,14 @@ import { ProjectService } from 'src/app/_services/project.service';
 })
 export class HomeComponent implements OnInit {
 
-  projects: any;
+  project: any = [{
+    ownerId: "",
+    title: "",
+    desc: "",
+    img: "",
+    startAt: "",
+    endAt: "",
+  }];
   token: any;
   test: any;
   constructor(private projectService: ProjectService, private router: Router) {
@@ -18,9 +25,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.projectService.getAllProjects().subscribe(
-      data => this.projects = data,
+      data => this.project = data,
       err => console.log(err));
-
 
   }
 

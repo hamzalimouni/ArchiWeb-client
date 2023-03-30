@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AlayoutComponent } from './alayout/alayout.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
     path: '', component: AlayoutComponent, children: [
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-      { path: 'dashboard', component: DashboardComponent },
+      { path: '', redirectTo: 'user', pathMatch: 'full' },
       { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
       { path: 'project', loadChildren: () => import('./project/project.module').then(m => m.ProjectModule) },
       { path: 'skill', loadChildren: () => import('./skill/skill.module').then(m => m.SkillModule) },

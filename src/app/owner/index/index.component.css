@@ -1,0 +1,45 @@
+.contentContainer {
+  height: 100vh;
+  flex: 5;
+}
+
+.title {
+  background-color: #3f51b5;
+  color: #FFF;
+  font-size: 30px;
+  font-weight: 500;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-mdc-table tbody,
+.mat-mdc-table tfoot,
+.mat-mdc-table thead,
+.mat-mdc-cell,
+.mat-mdc-footer-cell,
+.mat-mdc-header-row,
+.mat-mdc-row,
+.mat-mdc-footer-row,
+.mat-mdc-table .mat-mdc-header-cell {
+  min-width: 120px;
+  padding: 10px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -15,6 +15,10 @@ export class ProjectService {
     return this.http.get<IDataProject[]>(this.url);
   }
 
+  getOwnerProjects(id: string | null): Observable<IDataProject[]> {
+    return this.http.get<IDataProject[]>(`${this.url}/owner/${id}`);
+  }
+
   getProject(id: string | null): Observable<ISinglProject> {
     return this.http.get<ISinglProject>(`${this.url}/find/${id}`);
   }

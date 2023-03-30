@@ -16,6 +16,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ProjectComponent } from './project/project.component';
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     SkillComponent,
     PlayoutComponent,
     NavbarComponent,
-    ProfileComponent
+    ProfileComponent,
+    ProjectComponent
   ],
   imports: [
     CommonModule,
@@ -38,7 +41,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatSnackBarModule
   ]
 })
 export class PublicModule { }

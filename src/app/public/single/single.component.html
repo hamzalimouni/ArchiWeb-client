@@ -3,4 +3,5 @@
   <p class="date">Du {{project.startAt | date:'dd/MM/yyyy'}} au {{project.endAt | date:'dd/MM/yyyy'}}</p>
   <img [src]="project.img" alt={{project.title}}>
   <p class="description">{{project.desc}}</p>
+  <button mat-raised-button color="primary" type="submit" (click)="onSubmit()">Add</button>
 </div>

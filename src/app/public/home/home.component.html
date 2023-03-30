@@ -1,12 +1,12 @@
 <div class="container">
   <div fxLayout="row wrap" fxLayoutGap="10px grid">
-    <div fxFlex="33%" fxFlex.sm="50%" fxFlex.xs="100%" *ngFor="let project of projects">
+    <div fxFlex="33%" fxFlex.sm="50%" fxFlex.xs="100%" *ngFor="let project of project">
       <mat-card class="example-card">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
           <mat-card-title>{{project.title}}</mat-card-title>
         </mat-card-header>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <img mat-card-image [src]="project.img" alt="Photo of a Shiba Inu">
         <mat-card-content>
           <div>
             <p class="desc">

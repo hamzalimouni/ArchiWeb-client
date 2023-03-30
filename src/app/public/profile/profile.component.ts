@@ -23,6 +23,7 @@ export class ProfileComponent implements OnInit {
   constructor(private tokenService: TokenService, private userService: UserService) { }
   ngOnInit(): void {
     let id = this.tokenService.getId();
+    console.log(id);
     this.userService.getUser(id).subscribe(
       (data: ISingleUser) => this.user = data,
       err => console.log(err),
